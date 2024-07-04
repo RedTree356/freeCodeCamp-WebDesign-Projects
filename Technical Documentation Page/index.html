@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>Technical Documentation Page Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header id="top-header">
+      <div>
+        <p>Structuring the web with HTML</p>
+      </div>
+    </header>
+
+    <nav id="navbar">
+      <div id="navbar-logo">
+        <img id="html-icon" src="./img/html-icon.png" alt="html5 icon" />
+        <!--<img id="html-icon" src="https://cdn0.iconfinder.com/data/icons/social-network-9/50/22-1024.png" alt="html5 icon" />-->
+        <h1>HTML Basics</h1>
+      </div>
+      <header id="nav-header">HTML DOCUMENTATION</header>
+      <ul>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#Getting_started_with_html">Getting started with HTML</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#What_is_HTML?">What is HTML?</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a>
+        </li>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#What's_in_the_head?">What's in the head?</a></li>
+        <li class="list-element">
+          <a class="nav-link" href="#What_is_the_HTML_head?">What is the HTML head?</a></li>
+        <li class="list-element">
+          <a class="nav-link" href="#Adding_a_title">Adding a title</a>
+        </li>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#HTML_text_fundamentals">HTML text fundamentals</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Headings_and_Paragraphs">Headings and Paragraphs</a></li>
+        <li class="list-element">
+          <a class="nav-link" href="#Implementing_structural_hierarchy">Implementing structural hierarchy</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Why_do_we_need_structure?">Why do we need structure?</a>
+        </li>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#Creating_hyperlinks">Creating hyperlinks</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#What_is_a_hyperlink?">What is a hyperlink?</a></li>
+        <li class="list-element">
+          <a class="nav-link" href="#Anatomy_of_a_link">Anatomy of a link</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Block_level_links">Block level links</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Image_links">Image links</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Adding_supporting_information_with_the_title_attribute">Adding supporting information with the title attribute</a>
+        </li>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#Advanced_text_formatting">Advanced text formatting</a>
+        </li>
+        <li class="list-element">
+          <a class="nav-link" href="#Description_lists">Description Lists</a>
+        </li>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#Quotations">Quotations</a>
+        </li>
+        <li class="list-element list-header">
+          <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main-container">
+      <main id="main-doc">
+
+        <section class="main-section" id="Getting_started_with_html">
+          <header>Getting started with HTML</header>
+          <article>
+            <p>
+              In this article, we cover the absolute basics of HTML. To get you started, this article defines 
+              elements, attributes, and all the other important terms you may have heard. It also explains 
+              where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML 
+              page is structured, and other important basic language features. Along the way, there will be an 
+              opportunity to play with HTML too!
+            </p>
+          </article>
+        </section>
+  
+        <section class="main-section" id="What_is_HTML?">
+          <header>What is HTML?</header>
+          <article>
+            <p>
+              HTML (HyperText Markup Language) is a markup language that tells web browsers how to structure 
+              the web pages you visit. It can be as complicated or as simple as the web developer wants it to 
+              be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different 
+              parts of content to make it appear or act in a certain way. The enclosing tags can make content 
+              into a hyperlink to connect to another page, italicize words, and so on. For example, consider 
+              the following line of text:
+            </p>
+            <code>
+              My cat is very grumpy
+            </code>
+            <p>
+              If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it 
+              in a paragraph (<code class="inline">&lt;p&gt;</code>) element:
+            </p>
+            <code>
+              &lt;p&gt;My cat is very grumpy&lt;/p&gt;
+            </code>
+          </article>
+        </section>
+  
+        <section class="main-section" id="Anatomy_of_an_HTML_element">
+          <header>Anatomy of an HTML element</header>
+          <article>
+            <p>
+              Let's further explore our paragraph element from the previous section:
+            </p>
+            <img class="article-img resized" 
+            src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
+            alt="anatomy of a &lt;p&gt; element"
+            loading="lazy" />
+            <p>
+              The anatomy of our element is:
+            </p>
+            <ol>
+              <li>
+                <span class="bold">The opening tag:</span> This consists of the name of the element (in this example, p 
+                for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the 
+                element begins or starts to take effect. In this example, it precedes the start of the 
+                paragraph text.
+              </li>
+              <li>
+                <span class="bold">The content:</span> This is the content of the element. In this example, it is the 
+                paragraph text.
+              </li>
+              <li>
+                <span class="bold">The closing tag:</span> This is the same as the opening tag, except that it includes 
+                a forward slash before the element name. This marks where the element ends. Failing to include 
+                a closing tag is a common beginner error that can produce peculiar results.
+              </li>
+            </ol>
+            <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+          </article>
+        </section>
+  
+        <section class="main-section" id="What's_in_the_head?">
+          <header>What's in the head?</header>
+          <article>
+            <p>
+              The head of an HTML document is the part that is not displayed in the web browser when the page is 
+              loaded. It contains information such as the page <code class="inline">&lt;title&gt;</code>, links 
+              to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other 
+              metadata (data about the HTML, such as the author, and important keywords that describe the 
+              document.) Web browsers use information contained in the head to render the HTML document 
+              correctly. In this article we'll cover all of the above and more, in order to give you a good 
+              basis for working with markup.
+            </p>
+          </article>
+        </section>
+  
+        <section class="main-section" id="What_is_the_HTML_head?">
+          <header>What is the HTML head?</header>
+          <article>
+            <code>
+              <span class=new-line>&lt;!DOCTYPE html&gt;</span>
+              <span class=new-line>&lt;html&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&lt;head&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My test page&lt;/title&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&lt;/head&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&lt;body&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my page&lt;/p&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&lt;/body&gt;</span>
+              <span class=new-line>&lt;/html&gt;</span>
+            </code>
+            <p>
+              The HTML head is the contents of the <code class="inline">&lt;head&gt;</code> element — unlike the 
+              contents of the <code class="inline">&lt;body&gt;</code> element (which are displayed on the page 
+              when loaded in a browser), the head's content is not displayed on the page. Instead, the head's 
+              job is to contain metadata about the document. In the above example, the head is quite small:
+            </p>
+            <code>
+              <span class=new-line>&lt;head&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&lt;meta charset="utf-8" /&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;&lt;title&gt;My test page&lt;/title&gt;</span>
+              <span class=new-line>&lt;/head&gt;</span>
+            </code>
+            <p>
+              In larger pages however, the head can get quite large. Try going to some of your favorite websites 
+              and use the developer tools to check out their head contents. Our aim here is not to show you how 
+              to use everything that can possibly be put in the head, but rather to teach you how to use the 
+              major elements that you'll want to include in the head, and give you some familiarity. Let's get 
+              started.
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="Adding_a_title">
+          <header>Adding a title</header>
+          <article>
+            <p>
+              We've already seen the <code class="inline">&lt;title&gt;</code> element in action — this can be 
+              used to add a title to the document. This however can get confused with the 
+              <code class="inline">&lt;h1&gt;</code> element, which is used to add a top level heading to your 
+              body content — this is also sometimes referred to as the page title. But they are different things! 
+            </p>
+            <ul>
+              <li>
+                The <code class="inline">&lt;h1&gt;</code> element appears on the page when loaded in the browser — 
+                generally this should be used once per page, to mark up the title of your page content (the story 
+                title, or news headline, or whatever is appropriate to your usage).
+              </li>
+              <li>
+                The <code class="inline">&lt;title&gt;</code> element is metadata that represents the title of the 
+                overall HTML document (not the document's content).
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="HTML_text_fundamentals">
+          <header>HTML text fundamentals</header>
+          <article>
+            <p>
+              One of HTML's main jobs is to give text structure so that a browser can display an HTML document 
+              the way its developer intends. This article explains the way HTML can be used to structure a page 
+              of text by adding headings and paragraphs, emphasizing words, creating lists, and more.
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="Headings_and_Paragraphs">
+          <header>Headings and Paragraphs</header>
+          <article>
+            <p>
+              Most structured text consists of headings and paragraphs, whether you are reading a story, a 
+              newspaper, a college textbook, a magazine, etc. 
+            </p>
+            <img class="article-img resized"
+              src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals/newspaper_small.jpg"
+              alt="newspaper image"
+              loading="lazy"
+            />
+            <p>
+              Structured content makes the reading experience easier and more enjoyable.
+            </p>
+            <p>
+              In HTML, each paragraph has to be wrapped in a <code class="inline">&lt;p&gt;</code> element, 
+              like so:
+            </p>
+            <code>
+              &lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;
+            </code>
+            <p>
+              Each heading has to be wrapped in a heading element:
+            </p>
+            <code>
+              &lt;h1&gt;I am the title of the story.&lt;/h1&gt;
+            </code>
+            <p>
+              There are six heading elements — <code class="inline">&lt;h1&gt;</code>, 
+              <code class="inline">&lt;h2&gt;</code>, <code class="inline">&lt;h3&gt;</code>, 
+              <code class="inline">&lt;h4&gt;</code>, <code class="inline">&lt;h5&gt;</code>, and 
+              <code class="inline">&lt;h6&gt;</code>. Each element represents a different level of content in the 
+              document; <code class="inline">&lt;h1&gt;</code> represents the main heading, 
+              <code class="inline">&lt;h2&gt;</code> represents subheadings, <code class="inline">&lt;h1&gt;</code> 
+              represents sub-subheadings, and so on.
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="Implementing_structural_hierarchy">
+          <header>Implementing structural hierarchy</header>
+          <article>
+            <p>
+              For example, in this story, the <code class="inline">&lt;h1&gt;</code> element represents the title
+              of the story, the <code class="inline">&lt;h2&gt;</code> elements represent the title of each chapter,
+              and the <code class="inline">&lt;h3&gt;</code> elements represent subsections of each chapter:
+            </p>
+            <code>
+              <span class=new-line>&lt;h1&gt;The Crushing Bore&lt;/h1&gt;</span>
+              <span class=new-line>&lt;p&gt;By Chris Mills&lt;/p&gt;</span>
+              <span class=new-line>&lt;h2&gt;Chapter 1: The dark night&lt;/h2&gt;</span>
+              <span class=new-line>&lt;p&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…</span>
+              <span class=new-line>&lt;/p&gt;</span>
+  
+              <span class=new-line>&lt;h2&gt;Chapter 2: The eternal silence&lt;/h2&gt;</span>
+              <span class=new-line>&lt;p&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;Our protagonist could not so much as a whisper out of the shadowy figure…</span>
+              <span class=new-line>&lt;/p&gt;</span>
+  
+              <span class=new-line>&lt;h3&gt;The specter speaks&lt;/h3&gt;</span>
+              <span class=new-line>&lt;p&gt;</span>
+              <span class=new-line>&nbsp;&nbsp;Several more hours had passed, when all of a sudden the specter sat bolt
+                upright and exclaimed, "Please have mercy on my soul!"</span>
+              <span class=new-line>&lt;/p&gt;</span>
+            </code>
+            <p>
+              It's really up to you what the elements involved represent, as long as the hierarchy makes sense. 
+              You just need to bear in mind a few best practices as you create such structures:
+            </p>
+            <ul>
+              <li>
+                Preferably, you should use a single <code class="inline">&lt;h1&gt;</code> per page—this is the 
+                top level heading, and all others sit below this in the hierarchy.
+              </li>
+              <li>
+                Make sure you use the headings in the correct order in the hierarchy. Don't use 
+                <code class="inline">&lt;h3&gt;</code> elements to represent subheadings, followed by 
+                <code class="inline">&lt;h2&gt;</code> elements to represent sub-subheadings—that doesn't make 
+                sense and will lead to weird results.
+              </li>
+              <li>
+                Of the six heading levels available, you should aim to use no more than three per page, unless 
+                you feel it is necessary. Documents with many levels (for example, a deep heading hierarchy) 
+                become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the 
+                content over multiple pages if possible.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-section" id="Why_do_we_need_structure?">
+          <header>Why do we need structure?</header>
+          <article>
+            <p>
+              To answer this question, let's take a look at the image below—the starting point of our running 
+              example for this article (a nice hummus recipe). You should save a copy of this file on your 
+              local machine, as you'll need it for the exercises later on. This document's body currently 
+              contains multiple pieces of content. They aren't marked up in any way, but they are separated 
+              with line breaks (Enter/Return pressed to go onto the next line).
+            </p>
+            <p>
+              However, when you open the document in your browser, you'll see that the text appears as a big 
+              chunk!
+            </p>
+            <img class="article-img resized"
+              src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals/screen_shot_2017-03-29_at_09.20.35.png"
+              alt="image of a page with a hummus recipe"
+              loading="lazy"
+            />
+            <p>
+              This is because there are no elements to give the content structure, so the browser does not know 
+              what is a heading and what is a paragraph. Furthermore:
+            </p>
+            <ul>
+              <li>
+                Users looking at a web page tend to scan quickly to find relevant content, often just reading 
+                the headings, to begin with. If they can't see anything useful within a few seconds, they'll 
+                likely get frustrated and go somewhere else.
+              </li>
+              <li>
+                Search engines indexing your page consider the contents of headings as important keywords for 
+                influencing the page's search rankings. Without headings, your page will perform poorly in 
+                terms of SEO (Search Engine Optimization).
+              </li>
+              <li>
+                Severely visually impaired people often don't read web pages; they listen to them instead. 
+                This is done with software called a screen reader. This software provides ways to get fast 
+                access to given text content. Among the various techniques used, they provide an outline of the 
+                document by reading out the headings, allowing their users to find the information they need 
+                quickly. If headings are not available, they will be forced to listen to the whole document 
+                read out loud.
+              </li>
+              <li>
+                To style content with CSS, or make it do interesting things with JavaScript, you need to have 
+                elements wrapping the relevant content, so CSS/JavaScript can effectively target it.
+              </li>
+            </ul>
+            <p>
+              Therefore, we need to give our content structural markup.
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="Creating_hyperlinks">
+          <header>Creating hyperlinks</header>
+          <article>
+            <p>
+              Hyperlinks are really important — they are what makes the Web a web. This article shows the syntax 
+              required to make a link, and discusses link best practices.
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="What_is_a_hyperlink?">
+          <header>What is a hyperlink?</header>
+          <article>
+            <p>
+              Hyperlinks are one of the most exciting innovations the Web has to offer. They've been a feature of 
+              the Web since the beginning, and are what makes the Web a web. Hyperlinks allow us to link 
+              documents to other documents or resources, link to specific parts of documents, or make apps 
+              available at a web address. Almost any web content can be converted to a link so that when clicked 
+              or otherwise activated the web browser goes to another web address (URL). 
+            </p>
+            <div class="note">
+              <div class="info-icon">&#9432;</div>
+              <div class="note-text">
+                <span class="bold">Note:</span> A URL can point to HTML files, text files, images, text documents, video 
+                and audio files, or anything else that lives on the Web. If the web browser doesn't know how to 
+                display or handle the file, it will ask you if you want to open the file (in which case the duty 
+                of opening or handling the file is passed to a suitable native app on the device) or download the 
+                file (in which case you can try to deal with it later on). 
+              </div>
+            </div>
+            <p>
+              For example, the BBC homepage contains many links that point not only to multiple news stories, 
+              but also different areas of the site (navigation functionality), login/registration pages 
+              (user tools), and more.
+            </p>
+            <img class="article-img resized"
+              src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks/updated-bbc-website.png"
+              alt="bbc homepage"
+              loading="lazy"
+            />
+          </article>
+        </section>
+
+        <section class="main-section" id="Anatomy_of_a_link">
+          <header>Anatomy of a link</header>
+          <article>
+            <p>
+              A basic link is created by wrapping the text or other content inside an 
+              <code class="inline">&lt;a&gt;</code> element and using the 
+              <code class="inline">&lt;href&gt;</code> attribute, also known as a Hypertext Reference, or 
+              target, that contains the web address.
+            </p>
+            <code>
+                <span class="new-line">&lt;p&gt;</span>
+                <span class="new-line">&nbsp;&nbsp;I'm creating a link to</span>
+                <span class="new-line">&nbsp;&nbsp;&lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.</span>
+                <span class="new-line">&lt;/p&gt;</span>
+            </code>
+            <p>
+              This gives us the following result:
+            </p>
+            <p>
+              I'm creating a link to <a href="https://www.mozilla.org/en-US/" target="_blank">the Mozilla homepage</a>.
+            </p>
+          </article>
+        </section>
+
+        <section class="main-section" id="Block_level_links">
+          <header>Block level links</header>
+          <article>
+            <p>
+              As mentioned before, almost any content can be made into a link, even block-level elements. 
+              If you want to make a heading element a link then wrap it in an anchor 
+              (<code class="inline">&lt;a&gt;</code>) element as shown in the following code snippet: 
+            </p>
+            <code>
+              <span class="new-line">&lt;a href="https://developer.mozilla.org/en-US/"&gt;</span>
+              <span class="new-line">&nbsp;&nbsp;&lt;h1&gt;MDN Web Docs&lt;/h1&gt;</span>
+              <span class="new-line">&lt;/a&gt;</span>
+            </code>
+            <p>
+              This turns the heading into a link:
+            </p>
+            <a href="https://developer.mozilla.org/en-US/" 
+              target="_blank"
+            >
+              <h1>MDN Web Docs</h1>
+            </a>
+          </article>
+        </section>
+
+        <section class="main-section" id="Image_links">
+          <header>Image Links</header>
+          <article>
+            <p>
+              If you have an image you want to make into a link, use the 
+              <code class="inline">&lt;a&gt;</code> element to wrap the image file referenced with the 
+              <code class="inline">&lt;img&gt;</code> element. The example below uses a relative path to 
+              reference a locally stored SVG image file.
+            </p>
+            <code>
+              <span class="new-line">&lt;a href="https://developer.mozilla.org/en-US/"&gt;</span>
+              <span class="new-line">&nbsp;&nbsp;&lt;img src="mdn_logo.svg" alt="MDN Web Docs" /&gt;</span>
+              <span class="new-line">&lt;/a&gt;</span>
+            </code>
+            <p>
+              This makes the MDN logo a link: 
+            </p>
+            <a href="https://developer.mozilla.org/en-US/" 
+              target="_blank"
+            >
+              <img class="article-img resized" 
+                src="https://wiki.mozilla.org/images/thumb/a/ad/Mdn_logo-wordmark-full_color.png/240px-Mdn_logo-wordmark-full_color.png" 
+                alt="MDN Web Docs"
+                loading="lazy"
+              />
+            </a>
+          </article>
+        </section>
+
+        <section class="main-section" id="Adding_supporting_information_with_the_title_attribute">
+          <header>Adding supporting information with the title attribute</header>
+          <article>
+            <p>
+              Another attribute you may want to add to your links is title. The title contains additional 
+              information about the link, such as which kind of information the page contains, or things to be 
+              aware of on the website. 
+            </p>
+            <code>
+              <span class="new-line">&lt;p&gt;</span>
+              <span class="new-line">&nbsp;&nbsp;I'm creating a link to</span>
+              <span class="new-line">&nbsp;&nbsp;&lt;a</span>
+              <span class="new-line">&nbsp;&nbsp;&nbsp;&nbsp;href="https://www.mozilla.org/en-US/"</span>
+              <span class="new-line">&nbsp;&nbsp;&nbsp;&nbsp;title="The best place to find more information about Mozilla's mission and how to contribute"&gt;</span>
+              <span class="new-line">&nbsp;&nbsp;&nbsp;&nbsp;the Mozilla homepage&lt;/a&gt;.</span>
+              <span class="new-line">&lt;/p&gt;</span>
+            </code>
+            <p>
+              This gives us the following result and hovering over the link displays the title as a tooltip:
+            </p>
+            <p>
+              I'm creating a link to
+              <a
+                href="https://www.mozilla.org/en-US/"
+                target="_blank"
+                title="The best place to find more information about Mozilla's mission and how to contribute"
+              >
+                the Mozilla homepage
+              </a>.
+            </p>
+            <div class="note">
+              <div class="info-icon">&#9432;</div>
+              <div class="note-text">
+                <span class="bold">Note:</span> A link title is only revealed on mouse hover, which means that people 
+                relying on keyboard controls or touchscreens to navigate web pages will have difficulty 
+                accessing title information. If a title's information is truly important to the usability of 
+                the page, then you should present it in a manner that will be accessible to all users, for 
+                example by putting it in the regular text.
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="main-section" id="Advanced_text_formatting">
+          <header>Advanced text formatting</header>
+          <p>
+            There are many other elements in a HTML for formatting text, which we didn't get to in the 
+            <a href="#HTML_text_fundamentals">HTML text fundamentals</a> article. The elements described in this 
+            article are less known, but still useful to know about (and this is still not a complete list by any 
+            means). Here you'll learn about marking up quotations, description lists, computer code and other 
+            related text, subscript and superscript, contact information, and more.
+          </p>
+        </section>
+
+        <section class="main-section" id="Description_lists">
+          <header>Description lists</header>
+          <p>
+            In <a href="#HTML_text_fundamentals">HTML text fundamentals</a>, we walked through how to mark up 
+            basic lists in HTML, and we mentioned the third type of list you'll occasionally come across — 
+            description lists. The purpose of these lists is to mark up a set of items and their associated 
+            descriptions, such as terms and definitions, or questions and answers. Let's look at an example of 
+            a set of terms and definitions:
+          </p>
+          <code>	
+            <span class="new-line">soliloquy</span>
+            <span class="new-line">In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in 
+            the process relaying them to the audience (but not to other characters).</span>
+            <span class="new-line">monologue</span>
+            <span class="new-line">In drama, where a character speaks their thoughts out loud to share them with the audience and any other 
+            characters present.</span>
+            <span class="new-line">aside</span>
+            <span class="new-line">In drama, where a character shares a comment only with the audience for humorous or dramatic effect.</span>
+            <span class="new-line">This is usually a feeling, thought or piece of additional background information</span>
+          </code>
+          <p>
+            Description lists use a different wrapper than the other list types — 
+            <code class="inline">&lt;dl&gt;</code>; in addition each term is wrapped in a 
+            <code class="inline">&lt;dt&gt;</code> (description term) element, and each description is wrapped in a 
+            <code class="inline">&lt;dd&gt;</code> (description definition) element. 
+          </p>
+          <p>
+            Let's finish marking up our example:
+          </p>
+          <code>      	
+            <span class="new-line">&lt;dl&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;dt&gt;soliloquy&lt;/dt&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;dd&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&nbsp;&nbsp;In drama, where a character speaks to themselves, representing their inner 
+              thoughts or feelings and in the process relaying them to the audience (but not to other 
+              characters).</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;/dd&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;dt&gt;monologue&lt;/dt&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;dd&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&nbsp;&nbsp;In drama, where a character speaks their thoughts out loud to share them with the 
+              audience and any other characters present.</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;/dd&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;dt&gt;aside&lt;/dt&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;dd&gt;</span>
+            <span class="new-line">&nbsp;&nbsp;&nbsp;&nbsp;In drama, where a character shares a comment only with the audience for humorous 
+              or dramatic effect. This is usually a feeling, thought, or piece of additional background 
+              information.</span>
+            <span class="new-line">&nbsp;&nbsp;&lt;/dd&gt;</span>
+            <span class="new-line">&lt;/dl&gt;</span>
+          </code>
+        </section>
+
+        <section class="main-section" id="Quotations">
+          <header>Quotations</header>
+          <p>
+            HTML also has features available for marking up quotations; which element you use depends on 
+            whether you are marking up a block or inline quotation.
+          </p>
+          <p>
+            If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from 
+            somewhere else, you should wrap it inside a <code class="inline">&lt;blockquote&gt;</code> element to 
+            signify this, and include a URL pointing to the source of the quote inside a cite attribute.
+          </p>
+        </section>
+
+        <section class="main-section" id="Reference">
+          <header>Reference</header>
+          <p>
+            All the content on this page has been taken from
+            <a 
+              href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML" 
+              target="_blank"
+            >
+              MDN
+            </a>.
+			The icon used for the page logo is from
+			<a
+				href="https://www.iconfinder.com/icons/940979/html5_icon_%E2%80%A2_html_icon"
+				target="_blank"
+			>
+			IconFinder
+			</a>.
+          </p>
+        </section>
+  
+      </main>
+
+      <footer>
+        <p>
+          Designed and coded by
+          <a
+            href="https://github.com/RedTree356"
+            target="_blank"
+            rel="noreferrer"
+          >
+          RedTree365
+          </a>
+        </p>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>
