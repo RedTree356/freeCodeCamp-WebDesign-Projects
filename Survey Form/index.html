@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+    <script 
+      src="https://kit.fontawesome.com/d0a42f72bf.js"
+      crossorigin="anonymous">
+  </script>
+  </head>
+
+  <body>
+
+    <header class="flex-row">
+      <div id="logo" class="flex-row">
+        <img src="./img/Rpb_clothing_icon.png" alt="eco wear logo"/>
+        <h3 class="inline">Eco Wear</h3>
+      </div>
+      <div id="nav" class="flex-col">
+        <ul id="nav-links" class="flex-row">
+          <li id="nav-home" class="nav-list-el flex-col">
+            <a href="">Home</a>
+          </li>
+          <li id="nav-home" class="nav-list-el flex-col">
+            <a href="">Shop</a>
+          </li>
+          <li id="nav-home" class="nav-list-el flex-col">
+            <a href="">Support</a>
+          </li>
+          <li id="nav-home" class="nav-list-el flex-col">
+            <a href="">Help</a>
+          </li>
+          <li id="nav-home" class="nav-list-el flex-col">
+            <a href="">About</a>
+          </li>
+        </ul>
+      </div>
+      <div id="user-settings" class="flex-row">
+        <select id="lang-dropdown" class="input-dropdown flex-col">
+          <option lang="en" value="english">EN - English</option>
+          <option lang="de" value="deutsch">DE - Deutsch</option>
+          <option lang="fr" value="francais">FR - Francais</option>
+          <option lang="it" value="italiono">IT - Italiano</option>
+          <option lang="es" value="español">ES - Español</option>
+          <option lang="ru" value="русский">Py - Русский</option>
+        </select>
+        <i class="fa-solid fa-magnifying-glass flex-col"></i>
+        <i class="fa-solid fa-user flex-col"></i>
+        <i class="fa-solid fa-heart flex-col"></i>
+        <i class="fa-solid fa-cart-shopping flex-col"></i>
+      </div>
+    </header>
+
+    <div id="banner" class="flex-col">
+      <h1 id="title">Customer Satisfaction Survey</h1>
+      <p id="description">
+        At <span class="bold">Eco Wear</span>, we are committed to fulfilling our customers' needs, 
+        and providing a pleasant shopping experience.   
+        <span class="new-line space">Please fill in the form below to help us improve.</span>
+      </p>
+    </div>
+
+    <main>
+
+      <form id="survey-form" action="" method="post">
+
+        <div class="row-container flex-row">
+
+          <section id="personal-info" class="flex-col">
+            <h2>Personal Information</h2>
+
+            <div id="name-group" class="form-group">
+              <label id="name-label" class="main-label" for="name">Name</label>
+              <input 
+                type="text"
+                id="name"
+                name="name"
+                pattern="[A-Za-z0-9 ]{1,}"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div id="email-group" class="form-group">
+              <label id="email-label" class="main-label" for="email">Email</label>
+              <input 
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div id="age-sex" class="form-group flex-row">
+              <div id="age-group" class="flex-col">
+                <label id="number-label" class="main-label" for="age">Age</label>
+                <input 
+                  type="number"
+                  id="number"
+                  name="age"
+                  min="10"
+                  max="120"
+                  placeholder="Age"
+                  required
+                />
+              </div>
+              <div id="sex-group" class="flex-col">
+                <label id="sex-label" class="main-label" for="sex">Sex</label>
+                <select id="dropdown" class="input-dropdown" name="sex">
+                  <option value="">Male</option>
+                  <option value="1">Female</option>
+                  <option value="2">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="region-group" class="form-group">
+              <label id="region-label" class="main-label" for="region">Region</label>
+              <select id="region-dropdown" class="input-dropdown" name="region">
+                <option value="">Select your Region</option>
+                <option value="1">Africa</option>
+                <option value="2">Asia</option>
+                <option value="3">Australia</option>
+                <option value="4">Europe</option>
+                <option value="5">North America</option>
+                <option value="6">South America</option>
+              </select>
+            </div>
+
+          </section>
+
+          <section id="shopping-habits" class="flex-col">
+
+            <h2>Shopping with Us</h2>
+
+            <div class="form-group flex-row">
+              <fieldset id="visits">
+                <legend class="main-label">Visits per month
+                  <div class="small-text new-line">(Select one)</div></legend>
+                <div class="option">
+                  <input 
+                    type="radio"
+                    id="visits-per-month-1"
+                    name="visits-per-month"
+                    value="1"
+                    checked
+                  />
+                  <label class="inline" for="visits-per-month">One</label>
+                </div>
+                <div class="option">
+                  <input 
+                    type="radio"
+                    id="visits-per-month-2"
+                    name="visits-per-month"
+                    value="2"
+                  />
+                  <label class="inline" for="visits-per-month">Two</label>
+                </div>
+                <div class="option">
+                  <input 
+                    type="radio"
+                    id="visits-per-month-3"
+                    name="visits-per-month"
+                    value="3"
+                  />
+                  <label class="inline" for="visits-per-month">Three</label>
+                </div>
+                <div class="option">
+                  <input 
+                    type="radio"
+                    id="visits-per-month-4"
+                    name="visits-per-month"
+                    value="4"
+                  />
+                  <label class="inline" for="visits-per-month">Four</label>  
+                </div>
+                <div class="option">
+                  <input 
+                    type="radio"
+                    id="visits-per-month-5"
+                    name="visits-per-month"
+                    value="5"
+                  />
+                  <label class="inline" for="visits-per-month">Five+</label>  
+                </div>
+              </fieldset>
+
+              <fieldset class="prefs">
+                <legend class="main-label">Preferred products
+                  <div class="small-text new-line">(Select all that apply)</div></legend>
+                <div class="option">
+                  <input
+                    type="checkbox"
+                    id="range-1"
+                    name="preferred-product-ranges"
+                    value="clothes"
+                  />
+                  <label class="inline" for="range-1">Clothes</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="checkbox"
+                    id="range-2"
+                    name="preferred-product-ranges"
+                    value="shoes"
+                  />
+                  <label class="inline" for="range-2">Shoes</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="checkbox"
+                    id="range-3"
+                    name="preferred-product-ranges"
+                    value="hats"
+                  />
+                  <label class="inline" for="range-3">Hats</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="checkbox"
+                    id="range-4"
+                    name="preferred-product-ranges"
+                    value="bags"
+                  />
+                  <label class="inline" for="range-4">Bags</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="checkbox"
+                    id="range-5"
+                    name="preferred-product-ranges"
+                    value="accessories"
+                  />
+                  <label class="inline" for="range-5">Accessories</label>
+                </div>
+              </fieldset>
+
+            </div>
+
+            <div class="form-group flex-row">
+
+              <fieldset id="rec">
+                <legend class="main-label">Would you recommend us to a friend?</legend>
+                <div id="rec-options" class="flex-col">
+                  <div class="option inline">
+                    <input 
+                      type="radio",
+                      id="rec-to-friend-1",
+                      name="rec-to-friend",
+                      value="yes"
+                    />
+                    <label class="inline" id="rec-yes" for="rec-to-friend-1">Yes</label>
+                  </div>
+                  <div class="option inline">
+                    <input 
+                      type="radio",
+                      id="rec-to-friend-2",
+                      name="rec-to-friend",
+                      value="no"
+                    />
+                    <label class="inline" id="rec-no" for="rec-to-friend-2">No</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+          </section>
+
+        </div>
+
+        <section id="additional-info" class="flex-col">
+
+          <h2>Additional Information</h2>
+          <label class="main-label" for="comments">Comments <div class="small-text">(optional)</div></label>
+          <textarea
+            id="comments"
+            name="comments"
+            cols="30"
+            rows="10"
+            placeholder="Your comments here..."
+          ></textarea>
+          
+          <div id="newsletter-submit" class="form-group flex-row">
+            <fieldset class="fieldset">
+              <legend class="main-label">Newsletter</legend>
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="subscribe"
+              />
+              <label class="inline" for="newsletter">Subscribe to our monthly offers!</label>
+            </fieldset>
+            
+            <button id="submit" value="Submit">SUBMIT</button>
+          </div>
+          
+        </section>
+
+      </form>
+
+    </main>
+
+    <footer id="footer" class="flex-row">
+      <div id="copyright" class="flex-col">
+        <p>
+          Designed and coded 
+        </p>
+        <p>
+          by 
+          <a href="https://github.com/RedTree356" target="_blank">Redtree356</a>
+        </p>
+      </div>
+      <div class="social-icons flex-row">
+        <a
+            href="https://facebook.com/"
+            target="_blank"
+            rel="noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a 
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+            href="https://twitter.com/" 
+            target="_blank" 
+            rel="noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+      <div id="info" class="flex-col">
+        <a href="">Terms & Conditions</a>
+        <a href="">Returns</a>
+        <a href="">FAQ</a>
+        <a href="">Contact</a>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
